@@ -1,11 +1,10 @@
 package com.demo.mcpservicetube.strategy;
 
-import com.demo.mcpservicetube.domain.Transcript;
-import com.demo.mcpservicetube.domain.TranscriptParts;
+import com.demo.mcpservicetube.model.Transcript;
+import com.demo.mcpservicetube.model.TranscriptParts;
 import com.demo.mcpservicetube.model.Video;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -14,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 public class SecondApi implements RequestApi{
 
     @Value("${second.api.url}")
-    @Setter
     private String secondApiUrl;
 
     @Override

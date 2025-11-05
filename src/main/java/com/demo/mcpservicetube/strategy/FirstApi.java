@@ -1,7 +1,6 @@
 package com.demo.mcpservicetube.strategy;
 
 import com.demo.mcpservicetube.model.Video;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -11,7 +10,6 @@ import org.springframework.web.util.HtmlUtils;
 public class FirstApi implements RequestApi{
 
     @Value("${first.api.url}")
-    @Setter
     private String firstApiUrl;
 
     @Override

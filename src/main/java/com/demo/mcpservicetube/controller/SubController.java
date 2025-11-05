@@ -2,7 +2,6 @@ package com.demo.mcpservicetube.controller;
 
 import com.demo.mcpservicetube.model.Video;
 import com.demo.mcpservicetube.service.SubtitleService;
-import lombok.AllArgsConstructor;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/sub")
 public class SubController {
 
-    private SubtitleService subtitleService;
+    private final SubtitleService subtitleService;
+
+    public SubController(SubtitleService subtitleService) {
+        this.subtitleService = subtitleService;
+    }
 
     @Tool(name = "get_subtitle", description = "Get subtitle for a video")
     @GetMapping()

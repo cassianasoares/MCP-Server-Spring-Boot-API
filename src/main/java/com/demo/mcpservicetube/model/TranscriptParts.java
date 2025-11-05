@@ -1,17 +1,19 @@
-package com.demo.mcpservicetube.domain;
+package com.demo.mcpservicetube.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Setter;
 
 import java.util.List;
 
-@Setter
 public class TranscriptParts {
     @JsonProperty("transcript_parts")
     private List<Transcript> transcripts;
 
     public List<Transcript> getTranscripts() {
         return transcripts;
+    }
+
+    public void setTranscripts(List<Transcript> transcripts) {
+        this.transcripts = transcripts;
     }
 }
 

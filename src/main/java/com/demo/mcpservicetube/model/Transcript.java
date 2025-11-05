@@ -1,12 +1,7 @@
-package com.demo.mcpservicetube.domain;
-
-import lombok.Getter;
-import lombok.Setter;
+package com.demo.mcpservicetube.model;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@Getter
-@Setter
 public class Transcript {
 
     private double duration;
@@ -17,5 +12,17 @@ public class Transcript {
         return transcripts.stream()
                 .map(Transcript::getText)
                 .collect(Collectors.joining(" "));
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public double getStart() {
+        return start;
+    }
+
+    public String getText() {
+        return text;
     }
 }

@@ -1,11 +1,12 @@
 package com.demo.mcpservicetube.strategy;
 
 import com.demo.mcpservicetube.model.Video;
-import lombok.SneakyThrows;
 import org.mockito.Mock;
 import org.springframework.web.client.RestTemplate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 
@@ -14,7 +15,6 @@ public class RequestApiTest {
     @Mock
     private RestTemplate restTemplate;
 
-    @SneakyThrows
     public void makeRequest(String resource, String url, RequestApi api) {
         // Arrange
         var video = new Video("tFg49R-Pe3", "en", "txt");
