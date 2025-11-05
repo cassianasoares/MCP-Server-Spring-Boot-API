@@ -103,14 +103,12 @@ git clone https://github.com/cassianasoares/MCP-Server-Spring-Boot-API.git
 cd MCP-Server-Spring-Boot-API
 ```
 
-2. Configure as variáveis de ambiente necessárias
-
-3. Compile o projeto:
+2. Compile o projeto:
 ```bash
 mvn clean install
 ```
 
-4. Execute a aplicação:
+3. Execute a aplicação:
 ```bash
 mvn spring-boot:run
 ```
